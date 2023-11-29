@@ -1,0 +1,165 @@
+footer {
+    position: relative;
+    background: #1c1c1c;
+    padding: 80px 50px 40px;
+    margin-top: 100px;
+
+    @media screen and (max-width: 1100px) {
+        margin-top: 150px;
+    }
+
+    .start {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background: $yellow;
+        padding: 30px 25px;
+        border-radius: 15px;
+        position: absolute;
+        width: 70%;
+        top: -16%;
+        left: 15%;
+
+        @media screen and (max-width: 1100px) {
+            width: 90%;
+            left: 5%;
+            top: -20%;
+        }
+
+        p {
+            font-size: 13px;
+            width: 35%;
+        }
+
+        button {
+            background: transparent;
+            border: 1px solid #000;
+            cursor: pointer;
+            padding: 8px 20px;
+            border-radius: 100px;
+            transition: all .3s ease;
+
+            &:hover {
+                background: $white;
+                border-color: $white;
+            }
+        }
+    }
+
+    .cols {
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: 859px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+
+        .about-col {
+            flex: 3;
+
+
+            h3 {
+                color: $yellow;
+                margin-top: 20px;
+            }
+
+            p {
+                color: $grey;
+                font-size: 13px;
+            }
+        }
+
+        .links-col {
+            flex: 3;
+
+           h4 {
+            color: $white;
+            margin-bottom: 20px;
+
+            @media screen and (max-width: 859px) {
+                margin-top: 10%;
+            }
+           }
+
+           a {
+            display: block;
+            text-decoration: none;
+            color: #7b7b7b;
+            font-size: 14px;
+            line-height: 26px;
+            transition: color .3s ease;
+
+            &:hover {
+                color: $yellow;
+            }
+           }
+        }
+
+        .news-col {
+            flex: 3;
+
+            h4 {
+                color: $white;
+                margin-bottom: 20px;
+
+                @media screen and (max-width: 859px) {
+                    margin-top: 10%;
+                }
+            }
+
+            p {
+                color: #7b7b7b;
+                font-size: 15px;
+            }
+
+            form {
+                width: 100%;
+                margin-top: 20px;
+                position: relative;
+
+                input {
+                    width: 100%;
+                    background: #212529;
+                    border: none;
+                    padding: 13px;
+                    border-radius: 100px;
+                    font-weight: 400;
+                    font-size: 13px;
+
+                    @media screen and (max-width: 859px) {
+                        height: 30px;
+                    }
+                }
+
+                button {
+                    @include childCenter;
+                    width: 45px;
+                    height: 45px;
+                    background: $yellow;
+                    border: none;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    cursor: pointer;
+                    transition: background-color .3s ease;
+
+                    @media screen and (max-width: 859px) {
+                        height: 30px;
+                        width: 30px;
+                    }
+
+                    &:hover {
+                        background: #fb8c00;
+                    }
+
+                    i {
+                        font-size: 26px;
+                    }
+                }
+            }
+        }
+    }
+}

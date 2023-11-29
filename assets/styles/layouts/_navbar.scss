@@ -5,6 +5,10 @@
     height: 80px;
     padding: 0 50px;
 
+    @media screen and (max-width: 790px) {
+        flex-direction: column;
+    }
+
     h2 {
         color: $yellow;
         font-weight: 600;
@@ -35,7 +39,11 @@
         }
     }
 
-    .hire-btn {
-      @include btn;
+    button {
+        @include btn;
+
+      @media screen and (max-width: 1015px) {
+        display: none;
+      }
     }
 }

@@ -5,6 +5,11 @@
     flex-wrap: nowrap;
     gap: 24px;
 
+    @media screen and (max-width: 1100px) {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
     .item {
         background-color: #292b2e;
         display: flex;
@@ -30,6 +35,10 @@
             color: $yellow;
         }
 
+        @media screen and (max-width: 1100px) {
+            flex-basis: 49%;
+        }
+
         .icon {
             @include childCenter;
             background: $white;
@@ -37,6 +46,10 @@
             width: 46px;
             height: 46px;
             transition: background-color .3s ease;
+
+            @media screen and (max-width: 750px) {
+                display: none;
+            }
 
             i {
                 font-size: 30px;
@@ -58,6 +71,7 @@
                 color: $white;
                 font-size: 15px;
                 font-weight: 600;
+
             }
 
         }
