@@ -1,0 +1,42 @@
+@font-face {
+    font-family: "Poppins";
+    src: url(/assets/fonts/Poppins-Bold.ttf);
+}
+
+$font1: Poppins, serif;
+$white: #fff;
+$yellow: #ffb742;
+$black: #212529;
+$grey: #ccc;
+
+* {
+    font-family: $font1, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin childCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin btn {
+    background: $yellow;
+    padding: 6px 30px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background: #fb8c00;
+    }
+}
+
+body {
+    height: 100vh;
+    background: $black;
+}
